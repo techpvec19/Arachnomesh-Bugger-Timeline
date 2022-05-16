@@ -1,0 +1,45 @@
+// Employee
+{
+    "employee_name": "Ankur Sir Again",
+    "employee_email_id": "ankursir@arachnomesh.com",
+    "employee_password": "demo",
+    "employee_user_id": 13,
+    "employee_profile_image": "",
+    "employee_contact_no": "9958595034",
+    "employee_date_of_birth": "2022-08-25",
+    "employee_joining_date": "2022-04-04",
+    "employee_status": 1,
+    "RoleId": 11
+}
+
+// Role
+{
+    "employee_role_name": "CEO",
+    "employee_role_description": "Boss",
+    "employee_role_isAdmin": 0
+}
+
+// Attendance
+{
+    "attendance_date": "2022-05-12",
+    "attendance_mark_in_time": "09:27:13",
+    "attendance_mark_out_time": "19:16:33",
+    "attendance_type": 2,
+    "attendance_break_time": 0,
+    "EmployeeId": 6
+}
+
+// Break
+{
+    "break_in_time": "04:20:00",
+    "break_out_time": "04:45:00",
+    "AttendanceId": 1
+}
+
+// Leave
+{
+    "leave_start_date": "2022-05-14",
+    "leave_end_date": "2022-05-15",
+    "leave_type": 0,
+    "EmployeeId": 1
+}

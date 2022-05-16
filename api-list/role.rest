@@ -1,0 +1,11 @@
+# This is 'role.rest' - A File containing all the rest apis of Role entity
+
+GET http://localhost:8080/api/arachnomesh/employeeRoles/allRoles
+
+GET http://localhost:8080/api/arachnomesh/employeeRoles/allRoles/:id
+
+PUT http://localhost:8080/api/arachnomesh/employeeRoles/allRoles/:id
+
+DELETE http://localhost:8080/api/arachnomesh/employeeRoles/allRoles/:id
+
+POST http://localhost:8080/api/arachnomesh/employeeRoles/addRole

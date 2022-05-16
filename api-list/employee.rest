@@ -1,0 +1,11 @@
+# This is 'employee.rest' - A File containing all the rest apis of Employee entity
+
+GET http://localhost:8080/api/arachnomesh/employees/allEmployees
+
+GET http://localhost:8080/api/arachnomesh/employees/allEmployees/:id
+
+PUT http://localhost:8080/api/arachnomesh/employees/allEmployees/:id
+
+DELETE http://localhost:8080/api/arachnomesh/employees/allEmployees/:id
+
+POST http://localhost:8080/api/arachnomesh/employees/addEmployee
