@@ -43,12 +43,12 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         task_progress: {
-            types: DataTypes.INTEGER,   // The Progress is in Percentage
+            type: DataTypes.INTEGER,   // The Progress is in Percentage
             defaultValue: 0
         },
 
         task_status: {
-            type: DataTypes.BOOL,   // 0 -> Incomplete,     1 -> Complete
+            type: DataTypes.BOOLEAN,   // 0 -> Incomplete,     1 -> Complete
             defaultValue: 0
         },
 
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
     // Task Associations
     Task.associate = (models) => {
         
-        Task.hasMany(models.subTask, {
+        Task.hasMany(models.SubTask, {
             onDelete: "cascade",
             onUpdate: "cascade"
         });

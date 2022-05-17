@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         project_estimated_time: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
         },
 
         project_spent_time: {
@@ -44,12 +44,12 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         project_progress: {
-            types: DataTypes.INTEGER,       // The Progress is in Percentage
+            type: DataTypes.INTEGER,       // The Progress is in Percentage
             defaultValue: 0
         },
 
         project_status: {
-            type: DataTypes.BOOL,   // 0 -> Incomplete,     1 -> Complete
+            type: DataTypes.BOOLEAN,   // 0 -> Incomplete,     1 -> Complete
             defaultValue: 0
         },
 
@@ -57,6 +57,11 @@ module.exports = (sequelize, DataTypes) => {
 
     // Project Associations
     Project.associate = (models) => {
+
+        // Many to Many Association between Employee and Project (N Employee -> N Project)
+        Project.belongsToMany(models.Employee, {
+            through: models.EmployeeProject
+        });
         
         Project.hasMany(models.Assignment, {
             onDelete: "cascade",

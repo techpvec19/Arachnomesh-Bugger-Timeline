@@ -2,6 +2,7 @@
 
 // Importing Requirements
 const Relations = require('../models');
+const project = require('../models/project');
 
 // Accessing Relations
 const Employee = Relations.Employee;
@@ -9,6 +10,10 @@ const Role = Relations.Role;
 const Attendance = Relations.Attendance;
 const Break = Relations.Break;
 const Leave = Relations.Leave
+const Project = Relations.Project;
+const Assignment = Relations.Assignment;
+const Task = Relations.Task;
+const SubTask = Relations.SubTask
 
 // 1. Add a new employee
 const addNewEmployee = async (req, res) => {
@@ -58,6 +63,18 @@ const getAllEmployees = async (req, res) => {
                 {
                     model: Leave,
                     attributes: ['leave_start_date', 'leave_end_date']
+                },
+                {
+                    model: Project,
+                    include: {
+                        model: Assignment,
+                        include: {
+                            model: Task,
+                            include: {
+                                model: SubTask
+                            }
+                        }
+                    }
                 }
             ]       
         });

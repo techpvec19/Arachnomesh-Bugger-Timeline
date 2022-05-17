@@ -43,12 +43,12 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         assignment_progress: {
-            types: DataTypes.INTEGER,   // The Progress is in Percentage
+            type: DataTypes.INTEGER,   // The Progress is in Percentage
             defaultValue: 0
         },
 
         assignment_status: {
-            type: DataTypes.BOOL,   // 0 -> Incomplete,     1 -> Complete
+            type: DataTypes.BOOLEAN,   // 0 -> Incomplete,     1 -> Complete
             defaultValue: 0
         },
 

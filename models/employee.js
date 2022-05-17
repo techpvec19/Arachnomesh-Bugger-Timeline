@@ -71,6 +71,11 @@ module.exports = (sequelize, DataTypes) => {
             onDelete: "cascade",
             onUpdate: "cascade",
         });
+
+        // Many to Many Association between Employee and Project (N Employee -> N Project)
+        Employee.belongsToMany(models.Project, {
+            through: models.EmployeeProject
+        });
         
     };
 

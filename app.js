@@ -34,13 +34,29 @@ app.use('/api/arachnomesh/breaks/', breakRoutes)
 const leaveRoutes = require('./routes/leave-routes');
 app.use('/api/arachnomesh/leaves/', leaveRoutes)
 
+// 6. Project Routes 
+const projectRoutes = require('./routes/project-routes');
+app.use('/api/arachnomesh/projects/', projectRoutes);
+
+// 7. Assignment Routes
+const assignmentRoutes = require('./routes/assignment-routes');
+app.use('/api/arachnomesh/assignments/', assignmentRoutes);
+
+// 8. Task Routes
+const taskRoutes = require('./routes/task-routes');
+app.use('/api/arachnomesh/tasks/', taskRoutes);
+
+// 9. Sub Task Routes
+const subTaskRoutes = require('./routes/subTask-routes');
+app.use('/api/arachnomesh/subTasks/', subTaskRoutes);
+
 // Home Route
 app.get('/', (req, res) => {
     res.send('Hello');
 });
 
 // Syncing the Database and Running the Application
-db.sequelize.sync().then(() => {
+db.sequelize.sync({ alter: true }).then(() => {
     app.listen(port, () => {
         console.log(`App Listening at http://localhost:${port}`);
     });
