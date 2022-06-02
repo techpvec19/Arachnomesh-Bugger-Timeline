@@ -1,15 +1,43 @@
+// Assignment
+{
+    "assignment_name": "Development",
+    "assignment_description": "Frontend Logic",
+    "assignment_assigned_to": "Tanya Keshari",
+    "assignment_start_date": "2022-04-04",
+    "assignment_end_date": "2022-08-31",
+    "assignment_estimated_time": 25000,
+    "assignment_spent_time": 5000,
+    "ProjectId": 1
+}
+
+// Attendance
+{
+    "attendance_date": "2022-06-01",
+    "attendance_mark_in_time": "09:30:00",
+    "attendance_mark_out_time": "06:30:00",
+    "attendance_type": 2,
+    "EmployeeId": 14
+}
+
+// Break
+{
+    "break_in_time": "04:20:00",
+    "break_out_time": "04:45:00",
+    "AttendanceId": 1
+}
+
 // Employee
 {
-    "employee_name": "Ankur Sir Again",
+    "employee_name": "Ankur Sir",
     "employee_email_id": "ankursir@arachnomesh.com",
     "employee_password": "demo",
-    "employee_user_id": 13,
+    "employee_user_id": 14,
     "employee_profile_image": "",
     "employee_contact_no": "9958595034",
     "employee_date_of_birth": "2022-08-25",
     "employee_joining_date": "2022-04-04",
     "employee_status": 1,
-    "RoleId": 11
+    "RoleId": 5
 }
 
 // Role
@@ -19,14 +47,10 @@
     "employee_role_isAdmin": 0
 }
 
-// Attendance
+// Employee-Project
 {
-    "attendance_date": "2022-05-12",
-    "attendance_mark_in_time": "09:27:13",
-    "attendance_mark_out_time": "19:16:33",
-    "attendance_type": 2,
-    "attendance_break_time": 0,
-    "EmployeeId": 6
+    "EmployeeId": 7,
+    "ProjectId": 1
 }
 
 // Break
@@ -38,8 +62,51 @@
 
 // Leave
 {
-    "leave_start_date": "2022-05-14",
-    "leave_end_date": "2022-05-15",
+    "leave_start_date": "2022-05-18",
+    "leave_end_date": "2022-05-31",
     "leave_type": 0,
-    "EmployeeId": 1
+    "EmployeeId": 6
+}
+
+// Project
+{
+    "project_name": "Tasks-1",
+    "project_description": "Redesign of Arachnomesh Bugger Timeline",
+    "project_assigned_to": "Tanya Keshari",
+    "project_start_date": "2022-04-04",
+    "project_end_date": "2022-08-31",
+    "project_estimated_time": 50000,
+    "project_spent_time": 5000,
+    "project_progress": 20,
+    "project_status": 0
+}
+
+// Role
+{
+    "employee_role_name": "CEO",
+    "employee_role_description": "Boss"
+}
+
+// Sub Task
+{
+    "subTask_name": "API",
+    "subTask_description": "API",
+    "subTask_assigned_to": "Tanya Keshari",
+    "subTask_start_date": "2022-04-04",
+    "subTask_end_date": "2022-08-31",
+    "subTask_estimated_time": 25000,
+    "subTask_spent_time": 5000,
+    "TaskId": 1
+}
+
+// Task
+{
+    "task_name": "FrontEnd",
+    "task_description": "FrontEnd Logic",
+    "task_assigned_to": "Tanya Keshari",
+    "task_start_date": "2022-04-04",
+    "task_end_date": "2022-08-31",
+    "task_estimated_time": 25000,
+    "task_spent_time": 5000,
+    "AssignmentId": 1
 }
