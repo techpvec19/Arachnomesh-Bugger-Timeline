@@ -76,6 +76,11 @@ module.exports = (sequelize, DataTypes) => {
         Employee.belongsToMany(models.Project, {
             through: models.EmployeeProject
         });
+
+        // Employee.hasMany(models.Activity, {
+        //     onDelete: "cascade",
+        //     onUpdate: "cascade",
+        // });
         
     };
 

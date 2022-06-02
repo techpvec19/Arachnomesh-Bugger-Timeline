@@ -9,6 +9,7 @@ const Project = Relations.Project;
 const Assignment = Relations.Assignment;
 const Task = Relations.Task;
 const SubTask = Relations.SubTask
+const EmployeeProject = Relations.EmployeeProject
 
 // 1. Add a new project
 const addNewProject = async (req, res) => {
@@ -53,6 +54,11 @@ const getAllProjects = async (req, res) => {
                         }
                     }
                 }, 
+                {
+                    attributes: ['id', 'employee_name'],
+                    model: Employee,
+                    through: {attributes: []}
+                },
             ]       
         });
 

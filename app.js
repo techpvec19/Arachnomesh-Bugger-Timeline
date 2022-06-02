@@ -50,6 +50,10 @@ app.use('/api/arachnomesh/tasks/', taskRoutes);
 const subTaskRoutes = require('./routes/subTask-routes');
 app.use('/api/arachnomesh/subTasks/', subTaskRoutes);
 
+// 10. Employee Project Relationship Routes
+const employeeProjectRelationshipRoutes = require('./routes/employee-project-routes');
+app.use('/api/arachnomesh/employeeProjectRelationships/', employeeProjectRelationshipRoutes);
+
 // Home Route
 app.get('/', (req, res) => {
     res.send('Hello');

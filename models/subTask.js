@@ -23,6 +23,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
+        subTask_type: {
+            type: DataTypes.STRING,
+            defaultValue: "Fixed"
+        },
+
         subTask_start_date: {
             type: DataTypes.DATEONLY,
             allowNull: false

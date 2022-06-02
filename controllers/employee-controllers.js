@@ -65,17 +65,28 @@ const getAllEmployees = async (req, res) => {
                     attributes: ['leave_start_date', 'leave_end_date']
                 },
                 {
+                    attributes: ['id', 'project_name'],
                     model: Project,
+                    through: {attributes: []},
+
                     include: {
+
+                        attributes: ['id', 'assignment_name'],
                         model: Assignment,
+
                         include: {
+
+                            attributes: ['id', 'task_name'],
                             model: Task,
+
                             include: {
+
+                                attributes: ['id', 'subTask_name'],
                                 model: SubTask
                             }
                         }
                     }
-                }
+                },
             ]       
         });
 
@@ -116,8 +127,31 @@ const getOneEmployee = async (req, res) => {
                 {
                     model: Leave,
                     attributes: ['leave_start_date', 'leave_end_date']
-                }
-            ]       
+                },
+                {
+                    attributes: ['id', 'project_name'],
+                    model: Project,
+                    through: {attributes: []},
+
+                    include: {
+
+                        attributes: ['id', 'assignment_name'],
+                        model: Assignment,
+
+                        include: {
+
+                            attributes: ['id', 'task_name'],
+                            model: Task,
+
+                            include: {
+
+                                attributes: ['id', 'subTask_name'],
+                                model: SubTask
+                            }
+                        }
+                    }
+                },
+            ]        
         });
         if(oneEmployee.length < 0)  res.status(200).send('Error: Not a Valid Employee Id');
         else    res.status(200).send(oneEmployee)
