@@ -4,10 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Importing Employee Controller
+// Importing Project Controller
 const projectControllers = require('../controllers/project-controllers')
 
-// Employee Routes
+// Project Routes
 router.post('/addProject', projectControllers.addNewProject);
 router.get('/allProjects', projectControllers.getAllProjects);
 router.get('/allProjects/:id', projectControllers.getOneProject);

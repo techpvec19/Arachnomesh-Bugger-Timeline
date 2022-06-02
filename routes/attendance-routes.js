@@ -7,7 +7,7 @@ const router = express.Router();
 // Importing Attendance Controller
 const attendanceController = require('../controllers/attendance-controller')
 
-// Employee Routes
+// Attendance Routes
 router.post('/addAttendance', attendanceController.addNewAttendance);
 router.get('/allAttendance', attendanceController.getAllAttendance);
 router.get('/allAttendance/:date', attendanceController.getOneAttendance);

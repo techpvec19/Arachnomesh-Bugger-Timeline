@@ -4,10 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Importing Employee Controller
+// Importing Task Controller
 const taskControllers = require('../controllers/task-controller')
 
-// Employee Routes
+// Task Routes
 router.post('/addTask', taskControllers.addNewTask);
 router.get('/allTasks', taskControllers.getAllTasks);
 router.get('/allTasks/:id', taskControllers.getOneTask);

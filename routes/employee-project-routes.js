@@ -4,10 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Importing Employee Controller
+// Importing Employee-Project Controller
 const employeeProjectControllers = require('../controllers/employee-project-controller')
 
-// Employee Routes
+// Employee-Project-Routes
 router.post('/addEmployeeProject', employeeProjectControllers.addNewEmployeeProjectRelationship);
 router.put('/allEmployeeProject/:id', employeeProjectControllers.updateOneEmployeeProjectRelationship);
 router.delete('/allEmployeeProject/:id', employeeProjectControllers.deleteOneEmployeeProjectRelationship);

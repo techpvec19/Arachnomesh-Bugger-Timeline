@@ -4,10 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Importing Employee Controller
+// Importing Sub Task Controller
 const subTaskControllers = require('../controllers/subTask-controller')
 
-// Employee Routes
+// Sub Task Routes
 router.post('/addSubTask', subTaskControllers.addNewSubTask);
 router.get('/allSubTasks', subTaskControllers.getAllSubTasks);
 router.get('/allSubTasks/:id', subTaskControllers.getOneSubTask);

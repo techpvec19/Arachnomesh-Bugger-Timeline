@@ -4,10 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Importing Employee Controller
+// Importing Assignment Controller
 const assignmentControllers = require('../controllers/assignment-controller')
 
-// Employee Routes
+// Assignment Routes
 router.post('/addAssignment', assignmentControllers.addNewAssignment);
 router.get('/allAssignments', assignmentControllers.getAllAssignments);
 router.get('/allAssignments/:id', assignmentControllers.getOneAssignment);

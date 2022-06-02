@@ -7,7 +7,7 @@ const router = express.Router();
 // Importing break Controller
 const breakController = require('../controllers/break-controller')
 
-// Employee Routes
+// Break Routes
 router.post('/addBreak', breakController.addNewBreak);
 router.put('/allBreaks/:id', breakController.updateOneBreak);
 router.delete('/allBreaks/:id', breakController.deleteOneBreak)
